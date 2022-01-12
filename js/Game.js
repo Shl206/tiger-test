@@ -4,14 +4,14 @@ Tiger.Game = function (game) {
 Tiger.Game.prototype = {
     create: function () {
         this.game.physics.startSystem(Phaser.Physics.ARCADE);
-        this.Gamebg = this.add.tileSprite(0, 0, 740, 1136, 'GameBg');
+        this.Gamebg = this.add.tileSprite(0, 0, 828, 1430, 'GameBg');
 
         //Block
-        this.Block1 = this.add.sprite(-65, 400, 'Block1');
+        this.Block1 = this.add.sprite(-45, 400, 'Block1');
         this.game.physics.enable(this.Block1, Phaser.Physics.ARCADE);
-        this.Block2 = this.add.sprite(510, 100, 'Block2');
+        this.Block2 = this.add.sprite(530, 100, 'Block2');
         this.game.physics.enable(this.Block2, Phaser.Physics.ARCADE);
-        this.Block3 = this.add.sprite(280, -300, 'Block3');
+        this.Block3 = this.add.sprite(300, -300, 'Block3');
         this.game.physics.enable(this.Block3, Phaser.Physics.ARCADE);
         this.Block4 = this.add.sprite(50, -700, 'Block4');
         this.game.physics.enable(this.Block4, Phaser.Physics.ARCADE);
@@ -23,23 +23,23 @@ Tiger.Game.prototype = {
 
 
 
-        this.tiger = this.add.sprite(300, 480, 'tiger');
+        this.tiger = this.add.sprite(336, 680, 'tiger');
         this.tiger.animations.add('move');
         this.tiger.animations.play('move', 6, true);
-        var tween = this.add.tween(this.tiger).to({ y: 670 }, 1500, null, true);
+        var tween = this.add.tween(this.tiger).to({ y: 860 }, 1600, null, true);
         tween.onComplete.add(this.onStart, this);
         this.physics.enable(this.tiger, Phaser.Physics.ARCADE);
-        this.bodyv = this.add.sprite(310, 520, 'bodyv');
-        var tween = this.add.tween(this.bodyv).to({ y: 720 }, 1500, null, true);
+        this.bodyv = this.add.sprite(360, 680, 'bodyv');
+        var tween = this.add.tween(this.bodyv).to({ y: 940 }, 1500, null, true);
         this.physics.enable(this.bodyv, Phaser.Physics.ARCADE);
 
 
         //this.Logo = this.add.sprite(560, 0, 'Logo');
 
 
-        var btnL = this.add.button(50, 910, 'left', this.runLeft, this);
-        var btnR = this.add.button(500, 910, 'right', this.runRight, this);
-        var btnR = this.add.button(272, 910, 'mid', this.runMid, this);
+        var btnL = this.add.button(30, 1150, 'left', this.runLeft, this);
+        var btnR = this.add.button(560, 1150, 'right', this.runRight, this);
+        var btnR = this.add.button(295, 1150, 'mid', this.runMid, this);
         //button.......
         //this.startGame();
     },
@@ -67,6 +67,7 @@ Tiger.Game.prototype = {
         var tween = this.add.tween(this.Award1).to({ y: 1200 }, 7500, null, true);
         var tween = this.add.tween(this.Award12).to({ y: 1200 }, 6600, null, true);
         var tween = this.add.tween(this.Block4).to({ y: 1200 }, 9000, null, true);
+        //this.game.paused = true;
         //this.gameIsover = false;
         
     },
@@ -101,7 +102,7 @@ Tiger.Game.prototype = {
     },
     showGameOverTxt: function () {
 
-        this.add.tileSprite(0, 0, 740, 1136, 'bgfail');
+        this.add.tileSprite(0, 0, 828, 1430, 'bgfail');
         this.add.sprite(25, 150, 'RedBook2');
         this.add.button(50, 1000, 'restart.btn', this.startGame, this);
         this.add.button(400, 1000, 'End', this.MainMenu, this);
@@ -118,7 +119,7 @@ Tiger.Game.prototype = {
         this.showGameOverTxt3();
     },
     showGameOverTxt3: function () {
-        this.add.tileSprite(0, 0, 740, 1136, 'bgfail');
+        this.add.tileSprite(0, 0, 828, 1430, 'bgfail');
         this.add.sprite(25, 150, 'RedBook2');
         this.add.button(50, 1000, 'restart.btn', this.startGame, this);
         this.add.button(400, 1000, 'End', this.MainMenu, this);
@@ -138,7 +139,7 @@ Tiger.Game.prototype = {
     showGameOverTxt1: function () {
         this.tiger = this.add.sprite(300, 400, 'tiger');
         //this.add.button(200, 500, 'button-start', this.win1, this);
-        this.add.tileSprite(0, 0, 740, 1136, 'win1Bg');
+        this.add.tileSprite(0, 0, 828, 1430, 'win1Bg');
         this.add.sprite(25, 150, 'RedBook2');
         this.add.sprite(110, 210, 'GM3');
         this.add.button(50, 1000, 'continue.btn', this.startGame1, this);
@@ -159,15 +160,15 @@ Tiger.Game.prototype = {
     },
     runLeft: function () {
         this.tiger.x = 80;
-        this.bodyv.x = 80;
+        this.bodyv.x = 95;
     },
     runRight: function () {
-        this.tiger.x = 520;
-        this.bodyv.x = 520;
+        this.tiger.x = 600;
+        this.bodyv.x = 620;
     },
     runMid: function () {
-        this.tiger.x = 300;
-        this.bodyv.x = 300;
+        this.tiger.x = 336;
+        this.bodyv.x = 336;
     },
     startGame: function () {
         this.state.start('Game');

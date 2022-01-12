@@ -63,8 +63,8 @@ Tiger.Preloader.prototype = {
         this.load.image('Endgoal', 'assets/endgoal.png');
         this.load.image('goal', 'assets/goal.png');
         this.load.image('endtiger', 'assets/end-tiger.png');
-        this.load.image('body', 'assets/tiger-bodyv.png');
-        this.load.image('bodyv', 'assets/tiger-body.png');
+        this.load.image('bodyv', 'assets/tiger-bodyv.png');
+        this.load.image('body', 'assets/tiger-body.png');
         this.load.image('bgfail', 'assets/bg-fail.png');
         this.load.image('fail1', 'assets/fail1.png');
         this.load.image('fail2', 'assets/fail2.png');
@@ -82,7 +82,7 @@ Tiger.Preloader.prototype = {
         //END OF MAINMENU.....
         //Spritesheet
         //Tiger.
-        this.load.spritesheet('tiger', 'assets/new-tiger.png', 250 / 2, 235, 2);
+        this.load.spritesheet('tiger', 'assets/new-tiger.png', 311 / 2, 289, 2);
         //Button Left-Right.
 
     },
