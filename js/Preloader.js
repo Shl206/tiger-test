@@ -63,8 +63,8 @@ Tiger.Preloader.prototype = {
         this.load.image('Endgoal', 'assets/endgoal.png');
         this.load.image('goal', 'assets/goal.png');
         this.load.image('endtiger', 'assets/end-tiger.png');
-        this.load.image('bodyv', 'assets/tiger-bodyv.png');
-        this.load.image('body', 'assets/tiger-body.png');
+        this.load.image('body', 'assets/tiger-bodyv.png');
+        this.load.image('bodyv', 'assets/tiger-body.png');
         this.load.image('bgfail', 'assets/bg-fail.png');
         this.load.image('fail1', 'assets/fail1.png');
         this.load.image('fail2', 'assets/fail2.png');

@@ -61,7 +61,7 @@ Tiger.Game.prototype = {
         //this.tiger.input.enableDrag(true);
         this.tiger.body.collideWorldBounds = true;
         this.bodyv.collideWorldBounds = true;
-        var tween = this.add.tween(this.Block1).to({ y: 1200 }, 3500, null, true);
+        var tween = this.add.tween(this.Block1).to({ y: 1500 }, 4600, null, true);
         var tween = this.add.tween(this.Block2).to({ y: 1200 }, 5000, null, true);
         var tween = this.add.tween(this.Block3).to({ y: 1200 }, 7000, null, true);
         var tween = this.add.tween(this.Award1).to({ y: 1200 }, 7500, null, true);
@@ -104,12 +104,12 @@ Tiger.Game.prototype = {
 
         this.add.tileSprite(0, 0, 828, 1430, 'bgfail');
         this.add.sprite(25, 150, 'RedBook2');
-        this.add.button(50, 1000, 'restart.btn', this.startGame, this);
-        this.add.button(400, 1000, 'End', this.MainMenu, this);
-        this.overlay = this.add.sprite(560, 0, 'Logo');
+        this.add.button(40, 1250, 'restart.btn', this.startGame, this);
+        this.add.button(440, 1250, 'End', this.MainMenu, this);
+        this.overlay = this.add.sprite(650, 0, 'Logo');
         this.overlay.visible = window.screen.width > 880 ? false : true;
-        this.add.sprite(145, 240, 'fail1');
-        this.add.sprite(290, 630, 'dump1');
+        this.add.sprite(125, 275, 'fail1');
+        this.add.sprite(320, 830, 'dump1');
     },
     //hit the rock!!!!!!!!!
     gameover3: function () {
@@ -121,12 +121,12 @@ Tiger.Game.prototype = {
     showGameOverTxt3: function () {
         this.add.tileSprite(0, 0, 828, 1430, 'bgfail');
         this.add.sprite(25, 150, 'RedBook2');
-        this.add.button(50, 1000, 'restart.btn', this.startGame, this);
-        this.add.button(400, 1000, 'End', this.MainMenu, this);
-        this.overlay = this.add.sprite(560, 0, 'Logo');
+        this.add.button(40, 1250, 'restart.btn', this.startGame, this);
+        this.add.button(440, 1250, 'End', this.MainMenu, this);
+        this.overlay = this.add.sprite(650, 0, 'Logo');
         this.overlay.visible = window.screen.width > 880 ? false : true;
-        this.add.sprite(240, 240, 'fail2');
-        this.add.sprite(280, 650, 'dump2');
+        this.add.sprite(260, 270, 'fail2');
+        this.add.sprite(290, 850, 'dump2');
     },
     //hit the water!!!!!!
     gameover1: function () {
@@ -141,10 +141,10 @@ Tiger.Game.prototype = {
         //this.add.button(200, 500, 'button-start', this.win1, this);
         this.add.tileSprite(0, 0, 828, 1430, 'win1Bg');
         this.add.sprite(25, 150, 'RedBook2');
-        this.add.sprite(110, 210, 'GM3');
-        this.add.button(50, 1000, 'continue.btn', this.startGame1, this);
-        this.add.button(400, 1000, 'End', this.MainMenu, this);
-        this.TigernFish = this.add.sprite(185, 450, 'TigernFish4');
+        this.add.sprite(110, 240, 'GM3');
+        this.add.button(40, 1250, 'continue.btn', this.startGame1, this);
+        this.add.button(440, 1250, 'End', this.MainMenu, this);
+        this.TigernFish = this.add.sprite(225, 650, 'TigernFish4');
         this.overlay = this.add.sprite(560, 0, 'Logo');
         this.overlay.visible = window.screen.width > 880 ? false : true;
     },
@@ -168,7 +168,7 @@ Tiger.Game.prototype = {
     },
     runMid: function () {
         this.tiger.x = 336;
-        this.bodyv.x = 336;
+        this.bodyv.x = 356;
     },
     startGame: function () {
         this.state.start('Game');
