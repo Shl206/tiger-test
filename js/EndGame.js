@@ -9,10 +9,10 @@ Tiger.EndGame.prototype = {
         //Block
         this.Endline = this.add.sprite(20, -900, 'End-line');
         this.game.physics.enable(this.Endline, Phaser.Physics.ARCADE);
-        this.Block7 = this.add.sprite(80, 950, 'Block7');
-        this.Block2 = this.add.sprite(510, -100, 'Block2');
+        this.Block7 = this.add.sprite(80, 1050, 'Block7');
+        this.Block2 = this.add.sprite(530, 100, 'Block2');
         this.game.physics.enable(this.Block2, Phaser.Physics.ARCADE);
-        this.Block8 = this.add.sprite(-30, -250, 'Block8');
+        this.Block8 = this.add.sprite(0, -50, 'Block8');
         this.game.physics.enable(this.Block8, Phaser.Physics.ARCADE);
         this.goal = this.add.sprite(0, -900, 'goal');
 
@@ -53,15 +53,15 @@ Tiger.EndGame.prototype = {
 
     onStart: function () {
         this.gameIsover = false;
-        this.Gamebg.autoScroll(0, 230);
+        this.Gamebg.autoScroll(0, 250);
         //this.tiger.inputEnabled = true;
         //this.tiger.input.enableDrag(true);
         this.tiger.body.collideWorldBounds = true;
-        var tween = this.add.tween(this.Block7).to({ y: 1500 }, 2500, null, true);
-        var tween = this.add.tween(this.Block2).to({ y: 1500 }, 6800, null, true);
-        var tween = this.add.tween(this.Block8).to({ y: 1500 }, 7500, null, true);
-        var tween = this.add.tween(this.goal).to({ y: 1200 }, 9500, null, true);
-        var tween = this.add.tween(this.Endline).to({ y: 1200 }, 8000, null, true);
+        var tween = this.add.tween(this.Block7).to({ y: 1500 }, 2000, null, true);
+        var tween = this.add.tween(this.Block2).to({ y: 1500 }, 5600, null, true);
+        var tween = this.add.tween(this.Block8).to({ y: 1500 }, 6300, null, true);
+        var tween = this.add.tween(this.goal).to({ y: 1200 }, 8500, null, true);
+        var tween = this.add.tween(this.Endline).to({ y: 1200 }, 7250, null, true);
 
         //this.gameIsover = false;
     },
@@ -107,8 +107,8 @@ Tiger.EndGame.prototype = {
         this.add.button(230, 1250, 'End', this.MainMenu, this);
         this.add.sprite(40, 680, 'Endgoal');
         this.add.sprite(340, 920, 'endtiger');
-        this.overlay = this.add.sprite(650, 0, 'Logo');
-        this.overlay.visible = window.screen.width > 480 ? false : true;
+        this.overlay = this.add.sprite(550, 0, 'Logo');
+        this.overlay.visible = window.screen.width > 860 ? false : true;
     },
 
 

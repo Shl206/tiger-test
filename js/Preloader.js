@@ -78,11 +78,12 @@ Tiger.Preloader.prototype = {
         this.load.image('right', 'assets/right.png');
         this.load.image('mid', 'assets/mid.png');
         this.load.image('page1', 'assets/Asset_1.png');
+        this.load.image('mobilelogo', 'assets/logo4mobile.png');
 
         //END OF MAINMENU.....
         //Spritesheet
         //Tiger.
-        this.load.spritesheet('tiger', 'assets/new-tiger.png', 311 / 2, 289, 2);
+        this.load.spritesheet('tiger', 'assets/new-tiger.png', 305 / 2, 287, 2);
         //Button Left-Right.
 
     },

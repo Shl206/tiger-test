@@ -64,19 +64,19 @@ Tiger.Game1.prototype = {
 
     onStart: function () {
         this.gameIsover = false;
-        this.Gamebg.autoScroll(0, 230);
+        this.Gamebg.autoScroll(0, 250);
         //this.tiger.inputEnabled = true;
         //this.tiger.input.enableDrag(true);
         this.tiger.body.collideWorldBounds = true;
         //var tween = this.add.tween(this.Block1).to({ y: 1200 }, 6000, null, true);
-        var tween = this.add.tween(this.Block3).to({ y: 1500 }, 2000, null, true);
-        var tween = this.add.tween(this.Block4).to({ y: 1500 }, 5050, null, true);
-        var tween = this.add.tween(this.Block5).to({ y: 1200 }, 6400, null, true);
-        var tween = this.add.tween(this.pondv).to({ y: 1200 }, 6300, null, true);
-        var tween = this.add.tween(this.pond1v).to({ y: 1200 }, 6300, null, true);
-        var tween = this.add.tween(this.Block6).to({ y: 1200 }, 9500, null, true);
-        var tween = this.add.tween(this.Award2).to({ y: 1200 }, 6850, null, true);
-        var tween = this.add.tween(this.Award22).to({ y: 1200 }, 8000, null, true);
+        var tween = this.add.tween(this.Block3).to({ y: 1500 }, 1800, null, true);
+        var tween = this.add.tween(this.Block4).to({ y: 1500 }, 4650, null, true);
+        var tween = this.add.tween(this.Block5).to({ y: 1200 }, 5400, null, true);
+        var tween = this.add.tween(this.pondv).to({ y: 1200 }, 5300, null, true);
+        var tween = this.add.tween(this.pond1v).to({ y: 1200 }, 5500, null, true);
+        var tween = this.add.tween(this.Block6).to({ y: 1200 }, 8500, null, true);
+        var tween = this.add.tween(this.Award2).to({ y: 1200 }, 5750, null, true);
+        var tween = this.add.tween(this.Award22).to({ y: 1200 }, 6500, null, true);
         //this.gameIsover = false;
     },
     hitBlock: function () {
@@ -107,8 +107,8 @@ Tiger.Game1.prototype = {
         this.add.sprite(25, 150, 'RedBook2');
         this.add.button(40, 1250, 'restart.btn', this.startGame, this);
         this.add.button(440, 1250, 'End', this.MainMenu, this);
-        this.overlay = this.add.sprite(560, 0, 'Logo');
-        this.overlay.visible = window.screen.width > 880 ? false : true;
+        this.overlay = this.add.sprite(550, 0, 'Logo');
+        this.overlay.visible = window.screen.width > 860 ? false : true;
         this.add.sprite(125, 275, 'fail1');
         this.add.sprite(320, 830, 'dump1');
     },
@@ -152,7 +152,7 @@ Tiger.Game1.prototype = {
 
 
     gameReset: function () {
-        this.state.start('Game'); 
+        this.state.start('Game');
     },
     //Go to MainMenu
     MainMenu: function () {

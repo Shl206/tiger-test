@@ -7,11 +7,11 @@ Tiger.Game.prototype = {
         this.Gamebg = this.add.tileSprite(0, 0, 828, 1430, 'GameBg');
 
         //Block
-        this.Block1 = this.add.sprite(-45, 400, 'Block1');
+        this.Block1 = this.add.sprite(-45, 680, 'Block1');
         this.game.physics.enable(this.Block1, Phaser.Physics.ARCADE);
-        this.Block2 = this.add.sprite(530, 100, 'Block2');
+        this.Block2 = this.add.sprite(530, 380, 'Block2');
         this.game.physics.enable(this.Block2, Phaser.Physics.ARCADE);
-        this.Block3 = this.add.sprite(300, -300, 'Block3');
+        this.Block3 = this.add.sprite(300, -250, 'Block3');
         this.game.physics.enable(this.Block3, Phaser.Physics.ARCADE);
         this.Block4 = this.add.sprite(50, -700, 'Block4');
         this.game.physics.enable(this.Block4, Phaser.Physics.ARCADE);
@@ -56,20 +56,20 @@ Tiger.Game.prototype = {
 
     onStart: function () {
         this.gameIsover = false;
-        this.Gamebg.autoScroll(0, 230);
+        this.Gamebg.autoScroll(0, 250);
         //this.tiger.inputEnabled = true;
         //this.tiger.input.enableDrag(true);
         this.tiger.body.collideWorldBounds = true;
         this.bodyv.collideWorldBounds = true;
-        var tween = this.add.tween(this.Block1).to({ y: 1500 }, 4600, null, true);
-        var tween = this.add.tween(this.Block2).to({ y: 1200 }, 5000, null, true);
-        var tween = this.add.tween(this.Block3).to({ y: 1200 }, 7000, null, true);
-        var tween = this.add.tween(this.Award1).to({ y: 1200 }, 7500, null, true);
-        var tween = this.add.tween(this.Award12).to({ y: 1200 }, 6600, null, true);
-        var tween = this.add.tween(this.Block4).to({ y: 1200 }, 9000, null, true);
+        var tween = this.add.tween(this.Block1).to({ y: 1500 }, 3000, null, true);
+        var tween = this.add.tween(this.Block2).to({ y: 1200 }, 3400, null, true);
+        var tween = this.add.tween(this.Block3).to({ y: 1200 }, 6000, null, true);
+        var tween = this.add.tween(this.Award1).to({ y: 1200 }, 6400, null, true);
+        var tween = this.add.tween(this.Award12).to({ y: 1200 }, 5600, null, true);
+        var tween = this.add.tween(this.Block4).to({ y: 1200 }, 8000, null, true);
         //this.game.paused = true;
         //this.gameIsover = false;
-        
+
     },
     hitBlock: function () {
         if (this.gameIsover) return;
@@ -145,8 +145,8 @@ Tiger.Game.prototype = {
         this.add.button(40, 1250, 'continue.btn', this.startGame1, this);
         this.add.button(440, 1250, 'End', this.MainMenu, this);
         this.TigernFish = this.add.sprite(225, 650, 'TigernFish4');
-        this.overlay = this.add.sprite(560, 0, 'Logo');
-        this.overlay.visible = window.screen.width > 880 ? false : true;
+        this.overlay = this.add.sprite(550, 0, 'Logo');
+        this.overlay.visible = window.screen.width > 860 ? false : true;
     },
     //Hit the Award!!!!!!!!
 
