@@ -85,7 +85,7 @@ Tiger.EndGame.prototype = {
     showGameOverTxt: function () {
         this.add.tileSprite(0, 0, 828, 1430, 'bgfail');
         this.add.sprite(25, 150, 'RedBook2');
-        this.add.button(40, 1250, 'restart.btn', this.startGame, this);
+        this.add.button(40, 1250, 'restart.btn', this.gameReset, this);
         this.add.button(440, 1250, 'End', this.MainMenu, this);
         this.overlay = this.add.sprite(650, 0, 'Logo');
         this.overlay.visible = window.screen.width > 480 ? false : true;
@@ -100,14 +100,13 @@ Tiger.EndGame.prototype = {
     },
     showGameOverTxt1: function () {
         this.tiger = this.add.sprite(300, 400, 'tiger');
-        this.add.button(200, 500, 'button-start', this.win1, this);
         this.add.tileSprite(0, 0, 828, 1430, 'win1Bg');
-        this.add.sprite(25, 150, 'RedBook2');
-        this.add.sprite(110, 280, 'GM5');
+        this.add.sprite(25, 230, 'RedBook2');
+        this.add.sprite(110, 360, 'GM5');
         this.add.button(230, 1250, 'End', this.MainMenu, this);
-        this.add.sprite(40, 680, 'Endgoal');
-        this.add.sprite(340, 920, 'endtiger');
-        this.overlay = this.add.sprite(550, 0, 'Logo');
+        this.add.sprite(40, 710, 'Endgoal');
+        this.add.sprite(340, 950, 'endtiger');
+        this.overlay = this.add.sprite(550, 0, 'mobilelogo');
         this.overlay.visible = window.screen.width > 860 ? false : true;
     },
 
@@ -130,12 +129,6 @@ Tiger.EndGame.prototype = {
     runMid: function () {
         this.tiger.x = 336;
         this.bodyv.x = 356;
-    },
-    startGame: function () {
-        this.state.start('Game');
-    },
-    win1: function () {
-        this.state.start('win1');
     },
 
 };

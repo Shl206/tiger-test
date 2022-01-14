@@ -15,7 +15,7 @@ Tiger.Game.prototype = {
         this.game.physics.enable(this.Block3, Phaser.Physics.ARCADE);
         this.Block4 = this.add.sprite(50, -700, 'Block4');
         this.game.physics.enable(this.Block4, Phaser.Physics.ARCADE);
-        this.Award1 = this.add.sprite(40, -400, 'Award4');
+        this.Award1 = this.add.sprite(40, -330, 'Award4');
         this.game.physics.enable(this.Award1, Phaser.Physics.ARCADE);
         this.Award12 = this.add.sprite(40, -400, 'Award12');
         this.game.physics.enable(this.Award12, Phaser.Physics.ARCADE);
@@ -64,8 +64,8 @@ Tiger.Game.prototype = {
         var tween = this.add.tween(this.Block1).to({ y: 1500 }, 3000, null, true);
         var tween = this.add.tween(this.Block2).to({ y: 1200 }, 3400, null, true);
         var tween = this.add.tween(this.Block3).to({ y: 1200 }, 6000, null, true);
-        var tween = this.add.tween(this.Award1).to({ y: 1200 }, 6400, null, true);
-        var tween = this.add.tween(this.Award12).to({ y: 1200 }, 5600, null, true);
+        var tween = this.add.tween(this.Award1).to({ y: 1200 }, 6300, null, true);
+        var tween = this.add.tween(this.Award12).to({ y: 1200 }, 5450, null, true);
         var tween = this.add.tween(this.Block4).to({ y: 1200 }, 8000, null, true);
         //this.game.paused = true;
         //this.gameIsover = false;
@@ -140,12 +140,12 @@ Tiger.Game.prototype = {
         this.tiger = this.add.sprite(300, 400, 'tiger');
         //this.add.button(200, 500, 'button-start', this.win1, this);
         this.add.tileSprite(0, 0, 828, 1430, 'win1Bg');
-        this.add.sprite(25, 150, 'RedBook2');
-        this.add.sprite(110, 240, 'GM3');
+        this.add.sprite(25, 230, 'RedBook2');
+        this.add.sprite(110, 320, 'GM3');
         this.add.button(40, 1250, 'continue.btn', this.startGame1, this);
         this.add.button(440, 1250, 'End', this.MainMenu, this);
         this.TigernFish = this.add.sprite(225, 650, 'TigernFish4');
-        this.overlay = this.add.sprite(550, 0, 'Logo');
+        this.overlay = this.add.sprite(550, 0, 'mobilelogo');
         this.overlay.visible = window.screen.width > 860 ? false : true;
     },
     //Hit the Award!!!!!!!!

@@ -8,7 +8,7 @@ Tiger.Game1.prototype = {
 
         //Block
         this.Block3 = this.add.sprite(300, 1050, 'Block3');
-        this.Block4 = this.add.sprite(20, 300, 'Block4');
+        this.Block4 = this.add.sprite(20, 450, 'Block4');
         this.game.physics.enable(this.Block4, Phaser.Physics.ARCADE);
         this.Block5 = this.add.sprite(360, -200, 'Block5');
         this.game.physics.enable(this.Block5, Phaser.Physics.ARCADE);
@@ -70,7 +70,7 @@ Tiger.Game1.prototype = {
         this.tiger.body.collideWorldBounds = true;
         //var tween = this.add.tween(this.Block1).to({ y: 1200 }, 6000, null, true);
         var tween = this.add.tween(this.Block3).to({ y: 1500 }, 1800, null, true);
-        var tween = this.add.tween(this.Block4).to({ y: 1500 }, 4650, null, true);
+        var tween = this.add.tween(this.Block4).to({ y: 1500 }, 4200, null, true);
         var tween = this.add.tween(this.Block5).to({ y: 1200 }, 5400, null, true);
         var tween = this.add.tween(this.pondv).to({ y: 1200 }, 5300, null, true);
         var tween = this.add.tween(this.pond1v).to({ y: 1200 }, 5500, null, true);
@@ -140,13 +140,13 @@ Tiger.Game1.prototype = {
         this.tiger = this.add.sprite(300, 400, 'tiger');
         this.add.button(200, 500, 'button-start', this.win1, this);
         this.add.tileSprite(0, 0, 828, 1430, 'win1Bg');
-        this.add.sprite(25, 150, 'RedBook2');
-        this.add.sprite(110, 270, 'GM2');
+        this.add.sprite(25, 230, 'RedBook2');
+        this.add.sprite(110, 350, 'GM2');
         this.add.button(40, 1250, 'continue.btn', this.startGame2, this);
         this.add.button(440, 1250, 'End', this.MainMenu, this);
         this.add.sprite(220, 650, 'TigernFish3');
-        this.overlay = this.add.sprite(650, 0, 'Logo');
-        this.overlay.visible = window.screen.width > 480 ? false : true;
+        this.overlay = this.add.sprite(550, 0, 'mobilelogo');
+        this.overlay.visible = window.screen.width > 860 ? false : true;
     },
     //Hit the award!!!!!!!!!
 

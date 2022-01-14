@@ -107,7 +107,7 @@ Tiger.Game3.prototype = {
     showGameOverTxt: function () {
         this.add.tileSprite(0, 0, 828, 1430, 'bgfail');
         this.add.sprite(25, 150, 'RedBook2');
-        this.add.button(40, 1250, 'restart.btn', this.startGame, this);
+        this.add.button(40, 1250, 'restart.btn', this.gameReset, this);
         this.add.button(440, 1250, 'End', this.MainMenu, this);
         this.overlay = this.add.sprite(650, 0, 'Logo');
         this.overlay.visible = window.screen.width > 480 ? false : true;
@@ -122,12 +122,12 @@ Tiger.Game3.prototype = {
     },
     showGameOverTxt1: function () {
         this.add.tileSprite(0, 0, 828, 1430, 'win1Bg');
-        this.add.sprite(25, 150, 'RedBook2');
-        this.add.sprite(178, 290, 'GM4');
+        this.add.sprite(25, 230, 'RedBook2');
+        this.add.sprite(178, 365, 'GM4');
         this.add.button(40, 1250, 'continue.btn', this.startGame, this);
         this.add.button(440, 1250, 'End', this.MainMenu, this);
         this.TigernFish = this.add.sprite(230, 700, 'TigernFish2');
-        this.overlay = this.add.sprite(550, 0, 'Logo');
+        this.overlay = this.add.sprite(550, 0, 'mobilelogo');
         this.overlay.visible = window.screen.width > 860 ? false : true;
     },
 
@@ -153,9 +153,6 @@ Tiger.Game3.prototype = {
     },
     startGame: function () {
         this.state.start('EndGame');
-    },
-    win1: function () {
-        this.state.start('win1');
     },
 
 };
