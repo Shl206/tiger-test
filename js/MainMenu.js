@@ -25,6 +25,6 @@ Tiger.MainMenu.prototype = {
 
     },
     startGame: function () {
-        this.state.start('Game1');
+        this.state.start('Game');
     }
 };
